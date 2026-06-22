@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="500x500" href="lupa-investigacao.png">
 
-    <title>André Barros | Investigação Particular e Inteligência Privada</title>
+    <title>Laercio Detetive | Investigação Particular e Inteligência Privada</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,16 +19,16 @@
 
     <style>
         :root {
-            --bg: #03080e;
-            --bg-secondary: #050d16;
-            --card-dark: #071320;
+            --bg: #000000;
+            --bg-secondary: #0a0a0a;
+            --card-dark: #0f0f0f;
             --card-light: #ffffff;
-            --gold: #fcba03; /* Prata metálico azulado Laranja XX */
-            --gold-light: #fcba03; /* Prata claro brilhante Laranja */
+            --gold: #D3AF37; /* Dourado */
+            --gold-light: #D3AF37; /* Dourado Claro brilhante */
             --gold-dark: #4b5f6c; /* Prata escuro / Sombra */
             --text-white: #ffffff;
             --text-dark: #121920;
-            --text-muted: #8da4b4; /* Descriçao Laranja Texto */
+            --text-muted: #8da4b4; /* Descriçao Texto */
             --border: rgba(141, 164, 180, 0.2);
         }
 
@@ -45,7 +45,7 @@
         body {
             font-family: 'Inter', sans-serif;
             color: var(--text-white);
-            background: linear-gradient(180deg, rgba(3, 8, 14, 0.6) 0%, rgba(5, 13, 22, 0.99) 100%), url('background.png');
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.99) 100%), url('background.png');
             background-attachment: fixed;
             overflow-x: hidden;
             position: relative;
@@ -71,7 +71,7 @@
         /* --- HERO SECTION COM RECORTE E IMAGEM (background2 apenas aqui) --- */
         .hero-outer {
             position: relative;
-            background: linear-gradient(180deg, rgba(2, 6, 10, 0.5) 0%, rgba(5, 15, 26, 0.96) 100%), url('background2.png');
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.96) 100%), url('background2.png');
             background-size: cover;
             background-position: center;
             padding-bottom: 100px;
@@ -171,25 +171,25 @@
 
         /* --- BOTÕES --- */
         .btn-gold {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #ffd154 0%, #fcba03 100%);
-    color: #050d16;
-    padding: 14px 36px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(252, 186, 3, 0.2);
-}
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #ffe185 0%, #D3AF37 100%);
+            color: #000000;
+            padding: 14px 36px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(211, 175, 55, 0.2);
+        }
 
-.btn-gold:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(252, 186, 3, 0.4);
-    background: linear-gradient(135deg, #fcba03 0%, #ffd154 100%);
-}
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(211, 175, 55, 0.4);
+            background: linear-gradient(135deg, #D3AF37 0%, #ffe185 100%);
+        }
 
         /* --- ÁREAS DE ATUAÇÃO --- */
         .section-header {
@@ -218,7 +218,7 @@
         }
 
         .act-card {
-            background-color: rgba(7, 19, 32, 0.85);
+            background-color: rgba(15, 15, 15, 0.85);
             border: 1px solid rgba(141, 164, 180, 0.12);
             border-radius: 12px;
             padding: 40px 30px;
@@ -267,7 +267,7 @@
 
         /* --- SEÇÃO SOBRE (ABOUT) --- */
         .about-section {
-            background: radial-gradient(circle at right, rgba(5, 17, 30, 0.6) 0%, transparent 60%);
+            background: radial-gradient(circle at right, rgba(15, 15, 15, 0.6) 0%, transparent 60%);
         }
 
         .about-grid {
@@ -331,7 +331,7 @@
             top: -37px;
             left: 50%;
             transform: translateX(-50%);
-            border: 4px solid #03080e;
+            border: 4px solid #000000;
             overflow: hidden;
         }
 
@@ -371,7 +371,7 @@
         }
 
         .faq-wrapper .faq-item {
-            background-color: rgba(7, 19, 32, 0.8);
+            background-color: rgba(15, 15, 15, 0.8);
             border-bottom: 1px solid rgba(141, 164, 180, 0.15);
             margin-bottom: 10px;
         }
@@ -505,7 +505,7 @@
         }
 
         .btn-dark-footer {
-            background-color: #071320;
+            background-color: #0f0f0f;
             color: var(--gold-light);
             text-align: center;
             padding: 14px 28px;
@@ -519,7 +519,7 @@
         }
 
         .btn-dark-footer:hover {
-            background-color: #0f253c;
+            background-color: #1f1f1f;
         }
 
         /* --- ANIMAÇÕES --- */
@@ -564,16 +564,15 @@
     <div class="hero-outer">
         <section class="container hero-grid">
             <div class="hero-image-box">
-                <!-- Você pode mudar para uma imagem com tema de investigação (ex: silhueta, lupa, brasão) -->
                 <img src="lupa-investigacao.png" alt="Inteligência e Investigação Privada">
             </div>
 
             <div class="hero-text-box">
                 <div class="main-logo-wrapper">
-                    <div class="main-logo">AB</div>
+                    <div class="main-logo">LD</div>
                 </div>
                 
-                <h1 class="hero-title">André Barros</h1>
+                <h1 class="hero-title">Laercio Detetive</h1>
                 <div class="hero-subtitle">Investigação Particular e Inteligência Privada</div>
                 
                 <div class="hero-description">
@@ -634,18 +633,18 @@
     <section class="about-section">
         <div class="container about-grid">
             <div class="about-text">
-                <h2>André Barros</h2>
-                <p>Com mais de 12 anos de atuação no mercado de inteligência privada, André Barros é referência em investigações de alta complexidade, operando sempre sob os mais rígidos critérios éticos e legais.</p>
+                <h2>Laercio Detetive</h2>
+                <p>Com mais de 12 anos de atuação no mercado de inteligência privada, Laercio Detetive é referência em investigações de alta complexidade, operando sempre sob os mais rígidos critérios éticos e legais.</p>
                 <p>Nossa agência conta com equipamentos de monitoramento de última geração, inteligência cibernética e técnicas avançadas de contraespionagem para garantir que o cliente obtenha as respostas necessárias com o máximo de discrição.</p>
                 <p>O foco primordial é o resguardo da sua privacidade. Atuamos com uma metodologia minuciosa onde cada detalhe importa, convertendo suspeitas em provas reais, válidas e incontestáveis.</p>
             </div>
             <div class="about-img-box">
-                <img src="foto-do-detetive.png" alt="Detetive André Barros">
+                <img src="foto-do-detetive.png" alt="Laercio Detetive">
             </div>
         </div>
     </section>
 
-    <!-- DEPOIMENTOS (Totalmente focado em privacidade, usando apenas iniciais ou nomes alterados) -->
+    <!-- DEPOIMENTOS -->
     <section>
         <div class="container">
             <div class="section-header">
@@ -660,7 +659,7 @@
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=60" alt="Cliente Preservado">
                     </div>
                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                    <p>"Excelente profissional. Contratei para auditar uma suspeita de fraude na minha distribuidora e o André descobriu o esquema em menos de uma semana. Recomendo muito."</p>
+                    <p>"Excelente profissional. Contratei para auditar uma suspeita de fraude na minha distribuidora e o Laercio descobriu o esquema em menos de uma semana. Recomendo muito."</p>
                     <span class="testi-author">— M.S.A., Diretor Executivo</span>
                 </div>
 
@@ -670,7 +669,7 @@
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=60" alt="Cliente Preservado">
                     </div>
                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                    <p>"Vivia uma angústia terrível no meu casamento. O André foi extremamente humano, discreto e me entregou um relatório impecável com todas as fotos e vídeos necessários."</p>
+                    <p>"Vivia uma angústia terrível no meu casamento. O Laercio foi extremamente humano, discreto e me entregou um relatório impecável com todas as fotos e vídeos necessários."</p>
                     <span class="testi-author">— Letícia F., Comerciante</span>
                 </div>
 
@@ -680,7 +679,7 @@
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=60" alt="Cliente Preservado">
                     </div>
                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                    <p>"Precisávamos localizar um ex-sócio que sumiu com ativos da empresa. A equipe de inteligência do André rastreou o paradeiro e os bens dele em tempo recorde."</p>
+                    <p>"Precisávamos localizar um ex-sócio que sumiu com ativos da empresa. A equipe de inteligência do Laercio rastreou o paradeiro e os bens dele em tempo recorde."</p>
                     <span class="testi-author">— Dra. Amanda R., Advogada Corporativa</span>
                 </div>
 
@@ -690,7 +689,7 @@
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=60" alt="Cliente Preservado">
                     </div>
                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                    <p>"Profissionalismo fantástico. O que mais me impressionou foi o cuidado com o sigilo do início ao fim. Nem parecia que tinha alguém monitorando o local."</p>
+                    <p>"Profissionalismo fantastico. O que mais me impressionou foi o cuidado com o sigilo do início ao fim. Nem parecia que tinha alguém monitorando o local."</p>
                     <span class="testi-author">— Carlos H., Empresário</span>
                 </div>
 
@@ -700,7 +699,7 @@
                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop&q=60" alt="Cliente Preservado">
                     </div>
                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                    <p>"Contratei os serviços de varredura digital e contraespionagem para o meu escritório. O André encontrou vulnerabilidades cruciais que ninguém via."</p>
+                    <p>"Contratei os serviços de varredura digital e contraespionagem para o meu escritório. O Laercio encontrou vulnerabilidades cruciais que ninguém via."</p>
                     <span class="testi-author">— R. Albuquerque, Investidor</span>
                 </div>
 
@@ -779,8 +778,8 @@
                 
                 <div class="footer-channels">
                     <div><i class="fa-solid fa-phone"></i> (31) 98765-4321</div>
-                    <div><i class="fa-solid fa-envelope"></i> <a href="mailto:contato@andrebarros.inf.br">contato@andrebarros.inf.br</a></div>
-                    <div><i class="fa-solid fa-globe"></i> <a href="http://www.andrebarros.inf.br" target="_blank">www.andrebarros.inf.br</a></div>
+                    <div><i class="fa-solid fa-envelope"></i> <a href="mailto:contato@laerciodetetive.inf.br">contato@laerciodetetive.inf.br</a></div>
+                    <div><i class="fa-solid fa-globe"></i> <a href="http://www.laerciodetetive.inf.br" target="_blank">www.laerciodetetive.inf.br</a></div>
                 </div>
                 
                 <a href="#contato" class="btn-dark-footer">

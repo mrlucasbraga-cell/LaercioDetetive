@@ -650,7 +650,7 @@
         <div class="container about-grid">
             <div class="about-text">
                 <h2>Laercio Detetive</h2>
-                <p>Com mais de 12 years de atuação no mercado de inteligência privada, Laercio Detetive é referência em investigações de alta complexidade, operando sempre sob os mais rígidos critérios éticos e legais.</p>
+                <p>Com mais de 12 anos de atuação no mercado de inteligência privada, Laercio Detetive é referência em investigações de alta complexidade, operando sempre sob os mais rígidos critérios éticos e legais.</p>
                 <p>Nossa agência conta com equipamentos de monitoramento de última geração, inteligência cibernética e técnicas avançadas de contraespionagem para garantir que o cliente obtenha as respostas necessárias com o máximo de discrição.</p>
                 <p>O foco primordial é o resguardo da sua privacidade. Atuamos com uma metodologia minuciosa onde cada detalhe importa, convertendo suspeitas em provas reais, válidas e incontestáveis.</p>
             </div>
@@ -860,32 +860,46 @@
 
 
         /* ==========================================================================
-           TRAVAS ADICIONAIS DE SEGURANÇA (ANTI-CÓPIA, ANTI-PRINT, ANTI-F12)
+           TRAVAS ADICIONAIS DE SEGURANÇA AVANÇADAS (ANTI-CÓPIA, ANTI-F12, ANTI-MAC)
            ========================================================================== */
 
         // 1. Bloqueia o Clique com o Botão Direito do Mouse
         document.addEventListener('contextmenu', event => event.preventDefault());
 
-        // 2. Bloqueia Atalhos de Teclado Específicos (Copiar, Inspecionar Elemento, Código Fonte)
+        // 2. Trava Suprema de Teclado (Windows e Mac)
         document.addEventListener('keydown', function(event) {
             // Bloqueia F12
             if (event.key === "F12") {
                 event.preventDefault();
                 return false;
             }
-            // Bloqueia Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+P
-            if (event.ctrlKey && (event.key === 'c' || event.key === 'C' || event.key === 'u' || event.key === 'U' || event.key === 's' || event.key === 'S' || event.key === 'p' || event.key === 'P')) {
+
+            // Detecta teclas de modificação (Ctrl no Windows, Cmd no Mac)
+            const isModifier = event.ctrlKey || event.metaKey;
+            const key = event.key.toLowerCase();
+
+            // Bloqueia C (Copiar), U (Ver Código Fonte), S (Salvar), P (Imprimir), A (Selecionar Tudo)
+            if (isModifier && (key === 'c' || key === 'u' || key === 's' || key === 'p' || key === 'a')) {
                 event.preventDefault();
                 return false;
             }
-            // Bloqueia Ctrl+Shift+I (Inspecionar do Chrome/Edge)
-            if (event.ctrlKey && event.shiftKey && (event.key === 'i' || event.key === 'I')) {
+
+            // Bloqueia Inspecionar Elemento no Windows (Ctrl+Shift+I ou J) e Mac (Cmd+Opt+I ou J)
+            if (isModifier && (event.shiftKey || event.altKey) && (key === 'i' || key === 'j' || key === 'c')) {
                 event.preventDefault();
                 return false;
             }
         });
 
-        // 3. Limpa a Área de Transferência se o usuário tentar dar PrintScreen
+        // 3. Sistema Ativo Anti-Cópia / Limpeza de Clipboard Contínua
+        document.addEventListener('copy', function(event) {
+            event.preventDefault();
+            if (event.clipboardData) {
+                event.clipboardData.setData('text/plain', 'Conteúdo Protegido por Sigilo Profissional.');
+            }
+        });
+
+        // 4. Mitigação do PrintScreen
         window.addEventListener('keyup', function(event) {
             if (event.key === 'PrintScreen') {
                 navigator.clipboard.writeText('');

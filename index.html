@@ -49,6 +49,22 @@
             background-attachment: fixed;
             overflow-x: hidden;
             position: relative;
+            
+            /* CSS ANTI-COPIA (Bloqueia seleção de texto) */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Impede o clique e arraste de imagens */
+        img {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            pointer-events: none;
         }
 
         .container {
@@ -634,7 +650,7 @@
         <div class="container about-grid">
             <div class="about-text">
                 <h2>Laercio Detetive</h2>
-                <p>Com mais de 12 anos de atuação no mercado de inteligência privada, Laercio Detetive é referência em investigações de alta complexidade, operando sempre sob os mais rígidos critérios éticos e legais.</p>
+                <p>Com mais de 12 years de atuação no mercado de inteligência privada, Laercio Detetive é referência em investigações de alta complexidade, operando sempre sob os mais rígidos critérios éticos e legais.</p>
                 <p>Nossa agência conta com equipamentos de monitoramento de última geração, inteligência cibernética e técnicas avançadas de contraespionagem para garantir que o cliente obtenha as respostas necessárias com o máximo de discrição.</p>
                 <p>O foco primordial é o resguardo da sua privacidade. Atuamos com uma metodologia minuciosa onde cada detalhe importa, convertendo suspeitas em provas reais, válidas e incontestáveis.</p>
             </div>
@@ -841,6 +857,41 @@
 
         // Rodapé
         sr.reveal('.footer-card', { distance: '30px' });
+
+
+        /* ==========================================================================
+           TRAVAS ADICIONAIS DE SEGURANÇA (ANTI-CÓPIA, ANTI-PRINT, ANTI-F12)
+           ========================================================================== */
+
+        // 1. Bloqueia o Clique com o Botão Direito do Mouse
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // 2. Bloqueia Atalhos de Teclado Específicos (Copiar, Inspecionar Elemento, Código Fonte)
+        document.addEventListener('keydown', function(event) {
+            // Bloqueia F12
+            if (event.key === "F12") {
+                event.preventDefault();
+                return false;
+            }
+            // Bloqueia Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+P
+            if (event.ctrlKey && (event.key === 'c' || event.key === 'C' || event.key === 'u' || event.key === 'U' || event.key === 's' || event.key === 'S' || event.key === 'p' || event.key === 'P')) {
+                event.preventDefault();
+                return false;
+            }
+            // Bloqueia Ctrl+Shift+I (Inspecionar do Chrome/Edge)
+            if (event.ctrlKey && event.shiftKey && (event.key === 'i' || event.key === 'I')) {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        // 3. Limpa a Área de Transferência se o usuário tentar dar PrintScreen
+        window.addEventListener('keyup', function(event) {
+            if (event.key === 'PrintScreen') {
+                navigator.clipboard.writeText('');
+                alert('Capturas de tela foram desativadas nesta página para proteção de dados.');
+            }
+        });
     </script>
 </body>
 </html>
